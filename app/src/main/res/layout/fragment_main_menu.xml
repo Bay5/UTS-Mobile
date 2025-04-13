@@ -28,25 +28,25 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/circleBtn"
+            android:id="@+id/lingkaranBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/circle" />
+            android:text="@string/lingkaran" />
 
         <Button
-            android:id="@+id/rectangleBtn"
+            android:id="@+id/persegiBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/rectangle" />
+            android:text="@string/persegi" />
 
         <Button
-            android:id="@+id/triangleBtn"
+            android:id="@+id/segitigaBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/triangle" />
+            android:text="@string/segitiga" />
 
     </LinearLayout>
 

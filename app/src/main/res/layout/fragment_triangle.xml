@@ -7,46 +7,53 @@
     tools:context=".ui.TriangleFragment">
 
     <TextView
-        android:id="@+id/heightTv"
+        android:id="@+id/tinggiTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/height"
+        android:text="@string/tinggi"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/heightEdt"
-        android:hint="@string/hintRadius"
+        android:id="@+id/tinggiEdt"
+        android:hint="@string/hintTinggi"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/heightTv"
+        app:layout_constraintTop_toBottomOf="@+id/tinggiTv"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/baseTv"
+        android:id="@+id/alasTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/base"
-        app:layout_constraintTop_toBottomOf="@id/heightEdt"
+        android:text="@string/alas"
+        app:layout_constraintTop_toBottomOf="@id/tinggiEdt"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/baseEdt"
-        android:hint="@string/hintRadius"
+        android:id="@+id/alasEdt"
+        android:hint="@string/hintAlas"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/baseTv"
+        app:layout_constraintTop_toBottomOf="@+id/alasTv"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <Button
-        android:id="@+id/resultBtn"
-        android:text="@string/result"
+        android:id="@+id/hasilBtn"
+        android:text="@string/hasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/baseEdt"
+        app:layout_constraintTop_toBottomOf="@id/alasEdt"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hasilLuasTv"
+        android:text="@string/NIM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hasilBtn"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

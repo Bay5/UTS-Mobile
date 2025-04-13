@@ -7,63 +7,63 @@
     tools:context=".ui.RectangleFragment">
 
     <TextView
-        android:id="@+id/lengthTv"
+        android:id="@+id/panjangTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/length"
+        android:text="@string/panjang"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/lengthEdt"
-        android:hint="@string/hintRadius"
+        android:id="@+id/panjangEdt"
+        android:hint="@string/hintPanjang"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/lengthTv"
+        app:layout_constraintTop_toBottomOf="@+id/panjangTv"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/sameLength"
+        android:id="@+id/samaPanjang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sameLength"
+        android:text="@string/samaPanjang"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lengthEdt"/>
+        app:layout_constraintTop_toBottomOf="@id/panjangEdt"/>
 
     <CheckBox
         android:id="@+id/checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/sameLength"
-        app:layout_constraintTop_toTopOf="@id/sameLength"
-        app:layout_constraintBottom_toBottomOf="@id/sameLength"
+        app:layout_constraintStart_toEndOf="@id/samaPanjang"
+        app:layout_constraintTop_toTopOf="@id/samaPanjang"
+        app:layout_constraintBottom_toBottomOf="@id/samaPanjang"
         />
 
     <TextView
-        android:id="@+id/heightTv"
+        android:id="@+id/tinggiTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/height"
+        android:text="@string/tinggi"
         app:layout_constraintTop_toBottomOf="@id/checkbox"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/heightEdt"
-        android:hint="@string/hintRadius"
+        android:id="@+id/tinggiEdt"
+        android:hint="@string/hintTinggi"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/heightTv"
+        app:layout_constraintTop_toBottomOf="@+id/tinggiTv"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
-        android:id="@+id/resultBtn"
-        android:text="@string/result"
+        android:id="@+id/hasilBtn"
+        android:text="@string/hasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/heightEdt"
+        app:layout_constraintTop_toBottomOf="@id/tinggiEdt"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
