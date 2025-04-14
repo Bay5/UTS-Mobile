@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@id/panjangEdt"/>
 
     <CheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/samaPanjang"
@@ -41,29 +41,44 @@
         />
 
     <TextView
-        android:id="@+id/tinggiTv"
+        android:id="@+id/lebarTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tinggi"
-        app:layout_constraintTop_toBottomOf="@id/checkbox"
+        android:text="@string/lebar"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/tinggiEdt"
-        android:hint="@string/hintTinggi"
+        android:id="@+id/lebarEdt"
+        android:hint="@string/hintLebar"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tinggiTv"
+        app:layout_constraintTop_toBottomOf="@+id/lebarTv"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <Button
         android:id="@+id/hasilBtn"
         android:text="@string/hasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tinggiEdt"
+        app:layout_constraintTop_toBottomOf="@id/lebarEdt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hasilLuasTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        app:layout_constraintTop_toBottomOf="@id/hasilBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hasilKelilingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="456"
+        app:layout_constraintTop_toBottomOf="@id/hasilLuasTv"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,4 +18,6 @@
     <string name="hintPanjang">Masukkan panjangnya</string>
     <string name="hintTinggi">Masukkan tingginya</string>
     <string name="hintAlas">Masukkan alasnya</string>
+    <string name="lebar">Lebar</string>
+    <string name="hintLebar">Masukkan lebarnya</string>
 </resources>
