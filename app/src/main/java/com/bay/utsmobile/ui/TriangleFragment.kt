@@ -14,7 +14,7 @@ class TriangleFragment : Fragment(R.layout.fragment_triangle) {
 
         val tinggiEdt = view.findViewById<EditText>(R.id.tinggiEdt)
         val alasEdt = view.findViewById<EditText>(R.id.alasEdt)
-        val hasilBtn = view.findViewById<Button>(R.id.hasilBtn)
+        val hasilBtn = view.findViewById<Button>(R.id.hitungBtn)
         val hasilLuasTv = view.findViewById<TextView>(R.id.hasilLuasTv)
 
         hasilBtn.setOnClickListener {

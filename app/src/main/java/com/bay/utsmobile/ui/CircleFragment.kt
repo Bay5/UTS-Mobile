@@ -15,7 +15,7 @@ class CircleFragment : Fragment(R.layout.fragment_circle) {
         super.onViewCreated(view, savedInstanceState)
 
         val jariJariEdt = view.findViewById<EditText>(R.id.jarijariEdt)
-        val hasilBtn = view.findViewById<Button>(R.id.hasilBtn)
+        val hasilBtn = view.findViewById<Button>(R.id.hitungBtn)
         val hasilLuasTv = view.findViewById<TextView>(R.id.hasilLuasTv)
         val hasilKelilingTv = view.findViewById<TextView>(R.id.hasilKelilingTv)
 

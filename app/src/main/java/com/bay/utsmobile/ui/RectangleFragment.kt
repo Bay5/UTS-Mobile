@@ -14,33 +14,40 @@ import android.widget.TextView
 import com.bay.utsmobile.R
 
 class RectangleFragment : Fragment(R.layout.fragment_rectangle) {
+    private lateinit var panjangEdt: EditText
+    private lateinit var lebarEdt: EditText
+    private lateinit var checkbox: CheckBox
+    private lateinit var hasilBtn: Button
+    private lateinit var hasilLuasTv: TextView
+    private lateinit var hasilKelilingTv: TextView
+
+    private val panjangWatcher = object : TextWatcher {
+        override fun afterTextChanged(s: Editable?) {
+            lebarEdt.setText(s.toString())
+        }
+
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val panjangEdt = view.findViewById<EditText>(R.id.panjangEdt)
-        val lebarEdt = view.findViewById<EditText>(R.id.lebarEdt)
-        val checkbox = view.findViewById<CheckBox>(R.id.checkBox)
-        val hasilBtn = view.findViewById<Button>(R.id.hasilBtn)
-        val hasilLuasTv = view.findViewById<TextView>(R.id.hasilLuasTv)
-        val hasilKelilingTv = view.findViewById<TextView>(R.id.hasilKelilingTv)
+        panjangEdt = view.findViewById(R.id.panjangEdt)
+        lebarEdt = view.findViewById(R.id.lebarEdt)
+        checkbox = view.findViewById(R.id.checkBox)
+        hasilBtn = view.findViewById(R.id.hitungBtn)
+        hasilLuasTv = view.findViewById(R.id.hasilLuasTv)
+        hasilKelilingTv = view.findViewById(R.id.hasilKelilingTv)
 
-        // disable widthEdt and make value for width same as length
         checkbox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 lebarEdt.isEnabled = false
                 lebarEdt.setText(panjangEdt.text.toString())
-
-                // Update lebar whenever panjang changes
-                panjangEdt.addTextChangedListener(object : TextWatcher {
-                    override fun afterTextChanged(s: Editable?) {
-                        lebarEdt.setText(s.toString())
-                    }
-
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-                })
+                panjangEdt.addTextChangedListener(panjangWatcher)
             } else {
                 lebarEdt.isEnabled = true
+                panjangEdt.removeTextChangedListener(panjangWatcher)
             }
         }
 
@@ -58,8 +65,6 @@ class RectangleFragment : Fragment(R.layout.fragment_rectangle) {
                 hasilLuasTv.text = "Masukkan panjang dan lebar yang valid"
                 hasilKelilingTv.text = ""
             }
-
-
         }
     }
 }

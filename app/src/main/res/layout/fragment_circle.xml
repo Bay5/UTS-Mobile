@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp"
     tools:context=".ui.CircleFragment">
 
     <TextView
         android:id="@+id/jariJariTv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/jariJari"
+        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/jarijariEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:hint="@string/hintJariJari"
         android:inputType="numberDecimal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/jariJariTv"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/jariJariTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <Button
-        android:id="@+id/hasilBtn"
-        android:text="@string/hasil"
+        android:id="@+id/hitungBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hitung"
         app:layout_constraintTop_toBottomOf="@id/jarijariEdt"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
     <TextView
         android:id="@+id/hasilLuasTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="123"
-        app:layout_constraintTop_toBottomOf="@id/hasilBtn"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Luas: 123"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/hitungBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
     <TextView
         android:id="@+id/hasilKelilingTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="456"
+        android:text="Keliling: 456"
+        android:textStyle="bold"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/hasilLuasTv"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
